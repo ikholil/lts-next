@@ -2,32 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components{
+  .container {
+    @apply mx-auto px-3 sm:px-0 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 3xl:max-w-[1296px] 4xl:max-w-[75%];
+  }
+  .display-1 {
+    @apply text-4xl md:text-6xl lg:text-[70px] xl:text-[80px] !leading-tight font-semibold;
+  }
+  .display-3 {
+    @apply text-3xl md:text-5xl lg:text-[56px] xl:text-[64px] !leading-tight font-semibold;
+  }
+  .display-4 {
+    @apply text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] !leading-tight font-semibold;
+  }
+  .btn {
+    @apply inline-flex border border-primary hover:bg-transparent hover:text-primary text-sm md:text-base font-medium duration-300 gap-2 py-1.5 sm:py-2 px-3 sm:px-4 3xl:py-2.5 lg:px-6 3xl:px-8 rounded-[32px] bg-primary items-center text-neutral-0 ;
+  }
+  .btn-outlined {
+    @apply btn bg-transparent text-primary hover:bg-primary hover:text-neutral-0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base{
+  body{
+    @apply bg-neutral-0 dark:bg-neutral-904 text-neutral-700 dark:text-neutral-0;
+  }
+  .h1 {
+    @apply text-3xl md:text-4xl xl:text-[48px] !leading-tight font-semibold;
+  }
+  .h2 {
+    @apply text-xl sm:text-2xl lg:text-3xl 3xl:text-[40px] font-semibold !leading-tight;
+  }
+  .h3 {
+    @apply text-xl lg:text-2xl 3xl:text-[32px] leading-tight font-medium sm:font-semibold;
+  }
+  .h4 {
+    @apply text-lg md:text-xl 3xl:text-2xl font-medium md:font-semibold;
+  }
+  .h5 {
+    @apply text-base md:text-xl font-medium md:font-semibold;
+  }
+  .h6 {
+    @apply text-base font-medium;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl xl:text-[48px] !leading-tight font-semibold;
+  }
+  h2 {
+    @apply text-xl sm:text-2xl lg:text-3xl 3xl:text-[40px] font-semibold !leading-tight;
+  }
+  h3 {
+    @apply text-xl lg:text-2xl 3xl:text-[32px] leading-tight font-medium sm:font-semibold;
+  }
+  h4 {
+    @apply text-lg md:text-xl 3xl:text-2xl font-medium md:font-semibold;
+  }
+  h5 {
+    @apply text-base md:text-xl font-medium md:font-semibold;
+  }
+  h6 {
+    @apply text-base font-medium;
   }
 }
