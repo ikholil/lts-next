@@ -1,11 +1,11 @@
 import Hero from "@/components/Hero";
-import LatestNews from "@/components/LatestNews";
+import LatestPosts from "@/components/LatestPosts";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <LatestNews />
+      <LatestPosts />
     </main>
   );
 }
